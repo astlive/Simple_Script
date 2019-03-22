@@ -1,12 +1,12 @@
 import os
-import glob
 import sys
+extlist = ['.jpg', '.png']
 dirpath = input("Enter the full path:")
 if os.path.isdir(dirpath):
 	list = os.listdir(dirpath)
 	for file in list:
 		ext = os.path.splitext(os.getcwd()+"/"+dirpath+"/"+file)[1]
-		if ext in ['.jpg', '.png']:
+		if ext in extlist:
 			print(file)
 		else:
 			list.remove(file)
